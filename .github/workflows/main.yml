@@ -12,11 +12,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: test
-        uses: ./.github/workflowsreusable-workflow.yml
-        with:
-          image-name: reusable-workflow-docker-image
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      image-name: reusable-workflow-docker-image
+    secrets: inherit
