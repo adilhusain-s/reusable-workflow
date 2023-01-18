@@ -1,11 +1,10 @@
 name: Reusable workflow example
 
 on:
-  workflow_call:
-    inputs:
-      image-name:
-        required: true
-        type: string
+  inputs:
+    image-name:
+      required: true
+      type: string
 
 jobs:
   triage:
