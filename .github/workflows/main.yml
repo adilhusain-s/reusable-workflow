@@ -14,5 +14,5 @@ jobs:
   call-workflow-passing-data:
     uses: ./.github/workflows/reusable-workflow.yml
     with:
-      image-name: reusable-workflow-docker-image
+      image-name: adysh97/reusable-workflow-docker-image
     secrets: inherit
