@@ -12,7 +12,11 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: .github/workflows/reusable-workflow.yml@master
-    with:
-      config-path: .github/labeler.yml
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: test
+        uses: ./.github/workflowsreusable-workflow.yml
+        with:
+          image-name: reusable-workflow-docker-image
